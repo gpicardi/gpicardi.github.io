@@ -8,7 +8,7 @@
 <meta name="author" content="Giacomo Picardi">
 <meta property="og:title" content="Giacomo Picardi">
 <meta property="og:description" content="Bio-inspired marine robotics and robotics for marine science — ICM-CSIC, Barcelona.">
-<meta property="og:image" content="images/silver2-posidonia.jpg">
+<meta property="og:image" content="images/banner-silver2.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
@@ -18,13 +18,15 @@
  "sameAs":["https://orcid.org/0000-0001-9066-692X","https://github.com/gpicardi","https://www.icm.csic.es/en/staff/giacomo-picardi-4785"]}
 </script>
 <style>
-:root{--bg:#fff;--ink:#1f2328;--muted:#5f6670;--line:#e3e6e8;--accent:#1a5f7a;--band:#0f3b4c}
-@media (prefers-color-scheme:dark){:root{--bg:#14181b;--ink:#e4e7ea;--muted:#9aa3ab;--line:#2a3035;--accent:#7fb8cf;--band:#0d2a35}}
+:root{--bg:#fff;--ink:#1E293B;--muted:#5B6B7B;--line:#E2E8F0;--accent:#1F7AA8;--band:#102A43;--head:#102A43;--coral:#D0694B;--tint:#EEF4F8}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1A26;--ink:#E2E8F0;--muted:#94A3B8;--line:#1F3044;--accent:#6CB4D9;--band:#0B1F33;--head:#E2E8F0;--coral:#E8896E;--tint:#13263A}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif}
 a{color:var(--accent)}
 h1,h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600}
+h2,h3{color:var(--head)}
+a:hover{color:var(--coral)}
 .wrap{max-width:860px;margin:0 auto;padding:0 20px}
 
 nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
@@ -32,15 +34,22 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px
 nav b{white-space:nowrap}
 nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0;overflow-x:auto}
 nav ul a{color:var(--muted);text-decoration:none;font-size:15px;white-space:nowrap}
-nav ul a:hover{color:var(--accent)}
+nav ul a:hover{color:var(--coral)}
 
-.banner{height:260px;background:var(--band) url(images/silver2-posidonia.jpg) center 60%/cover;position:relative}
-.banner .wrap{position:relative;height:100%}
-.banner h1{position:absolute;left:20px;right:20px;bottom:22px;margin:0;color:#fff;font-size:30px;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.banner{background:var(--band)}
+.banner img{display:block;width:100%;height:clamp(240px,30vw,560px);object-fit:cover;object-position:50% 62%}
+.title{background:var(--band);color:#fff;padding:18px 0;border-bottom:3px solid var(--coral);text-align:center}
+.title .wrap{max-width:1200px}
+@media (min-width:900px){.title h1{white-space:nowrap}}
+.title h1{margin:0;font-size:28px}
 
-section{padding:40px 0;border-bottom:1px solid var(--line)}
+section{padding:48px 0}
+section:nth-of-type(even){background:var(--tint)}
+#gallery{background:var(--band)}
+#gallery h2{color:#fff}
+#gallery figcaption{color:#B8C7D6}
 section:last-of-type{border:0}
-h2{font-size:24px;margin:0 0 18px}
+h2{font-size:24px;margin:0 0 18px;padding-bottom:6px;border-bottom:2px solid var(--coral);display:inline-block}
 h3{font-size:17px;margin:22px 0 8px}
 
 .intro{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start}
@@ -58,18 +67,18 @@ ul.list li{margin-bottom:6px}
 .gallery img.fig{object-fit:contain;background:#fff}
 .gallery figcaption{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.35}
 
-ol.pubs{padding-left:24px;margin:0}
-ol.pubs li{margin-bottom:10px;font-size:16px}
+ul.pubs{padding-left:20px;margin:0}
+ul.pubs li{margin-bottom:10px;font-size:16px}
 .venue{font-style:italic}
 
-footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
+footer{padding:28px 0 40px;background:var(--band);color:#B8C7D6;font-size:14px}
 
 @media (max-width:680px){
   .intro{grid-template-columns:1fr}
   .intro img{width:140px;height:140px}
   .gallery{grid-template-columns:repeat(2,1fr)}
-  .banner{height:180px}
-  .banner h1{font-size:23px}
+  .banner img{height:auto;aspect-ratio:4/3;object-position:15% 80%}
+  .title h1{font-size:22px}
   nav b{display:none}
 }
 </style>
@@ -89,7 +98,8 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   </ul>
 </div></nav>
 
-<div class="banner"><div class="wrap"><h1>Bio-inspired Marine Robotics and Robotics for Marine Science</h1></div></div>
+<div class="banner"><img src="images/banner-silver2.jpg" alt="The underwater legged robot SILVER2 next to a Posidonia oceanica meadow"></div>
+<div class="title"><div class="wrap"><h1>Bio-inspired Marine Robotics and Robotics for Marine Science</h1></div></div>
 
 <section id="research"><div class="wrap">
   <h2>Research interests</h2>
@@ -99,8 +109,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
       <p>Researcher at the Institut de Ciències del Mar (ICM-CSIC), Barcelona, in the EMERGE group of the Department of Renewable Marine Resources. I obtained a PhD in Biorobotics at the BioRobotics Institute of Scuola Superiore Sant'Anna (Pisa, 2019), with a visiting period at the NASA Jet Propulsion Laboratory.</p>
       <p>My research interests lie in the design and control of robotic systems, with a primary focus on marine robotics. My work spans two synergistic areas: robotics for marine science, developing solutions for exploration, monitoring and intervention in underwater environments; and bioinspiration, extracting principles from nature's designs to inform novel robotic solutions, such as the underwater legged robot SILVER2.</p>
       <p class="profiles">
-        <!-- Replace # with your Google Scholar URL -->
-        <a href="#">Google Scholar</a> · <a href="https://orcid.org/0000-0001-9066-692X">ORCID</a> · <a href="https://github.com/gpicardi">GitHub</a> · <a href="https://www.icm.csic.es/en/staff/giacomo-picardi-4785">ICM-CSIC</a><br>
+        <a href="https://scholar.google.com/citations?user=U-N7EmMAAAAJ&amp;hl=en">Google Scholar</a> · <a href="https://orcid.org/0000-0001-9066-692X">ORCID</a> · <a href="https://github.com/gpicardi">GitHub</a> · <a href="https://www.icm.csic.es/en/staff/giacomo-picardi-4785">ICM-CSIC</a><br>
         Contact: <a href="mailto:gpicardi@icm.csic.es">gpicardi@icm.csic.es</a>
       </p>
     </div>
@@ -139,19 +148,22 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
   <div class="gallery">
     <figure><img src="images/silver2-litter.jpg" alt="SILVER2 collecting litter on the seabed" loading="lazy"><figcaption>SILVER2 during a litter collection test</figcaption></figure>
     <figure><img src="images/silver2-sampling.jpg" alt="SILVER2 sampling sediment" loading="lazy"><figcaption>Sediment sampling with SILVER2</figcaption></figure>
-    <figure><img src="images/silver2-posidonia.jpg" alt="SILVER2 near a Posidonia meadow" loading="lazy"><figcaption>SILVER2 next to a Posidonia oceanica meadow</figcaption></figure>
+    <figure><img src="images/arctic-ice.jpg" alt="Under-ice vehicle on the sea ice in Finland" loading="lazy"><figcaption>Under-ice vehicle field trials, Hailuoto (Finland)</figcaption></figure>
     <figure><img src="images/fieldwork-diving.jpg" alt="Divers during fieldwork" loading="lazy"><figcaption>Fieldwork at sea</figcaption></figure>
     <figure><img src="images/kristineberg-crawler.jpg" alt="Team with a benthic crawler at Kristineberg" loading="lazy"><figcaption>Benthic crawler deployment, Kristineberg Marine Research Station</figcaption></figure>
+    <figure><img src="images/spider-crabs.jpg" alt="Spider crabs walking on the seabed" loading="lazy"><figcaption>Spider crabs: biological models for benthic legged locomotion</figcaption></figure>
     <figure><img class="fig" src="images/crustacean-sorting.jpg" alt="Robotic arm sorting crustaceans" loading="lazy"><figcaption>Visual servoing for automatic crustacean sorting</figcaption></figure>
     <figure><img class="fig" src="images/uslip-hopping.jpg" alt="Underwater hopping and U-SLIP model" loading="lazy"><figcaption>Underwater hopping and the U-SLIP model</figcaption></figure>
+    <figure><img class="fig" src="images/actuator-exploded.jpg" alt="Exploded view of the underwater actuator" loading="lazy"><figcaption>Underwater actuator module of the Open Toolkit</figcaption></figure>
     <figure><img class="fig" src="images/soft-jet-propulsion.jpg" alt="Soft jet propulsion with a Hoberman mechanism" loading="lazy"><figcaption>Soft jet propulsion based on a Hoberman mechanism</figcaption></figure>
+    <figure><img class="fig" src="images/segmented-leg.jpg" alt="Segmented compliant appendage prototype" loading="lazy"><figcaption>Segmented compliant appendage prototype</figcaption></figure>
     <figure><img class="fig" src="images/soft-actuator.jpg" alt="Soft bending actuator, simulation and experiments" loading="lazy"><figcaption>Soft bending actuator: simulation and experiments</figcaption></figure>
   </div>
 </div></section>
 
 <section id="publications"><div class="wrap">
   <h2>Journal publications</h2>
-  <ol class="pubs">
+  <ul class="pubs">
     <li>Aguzzi J., Chatzidouros E., Buscaino G., Chatzievangelou D., <b>Picardi G.</b>, … &amp; Papaelias M. (2026). A policy-driven design of energy-autonomous intelligent observatories for marine biodiversity monitoring. <span class="venue">Engineering</span>. <a href="https://doi.org/10.1016/j.eng.2026.07.007">doi</a></li>
     <li>Aguirregomezcorta J., Aguzzi J. &amp; <b>Picardi G.</b> (2026). A review and case study on underwater legged robot simulation. <span class="venue">Ocean Engineering</span> (accepted).</li>
     <li><b>Picardi G.</b>, Iacoponi S., Carandell M., Aguirregomezcorta J., Chellapurath M., del Rio J., … &amp; Aguzzi J. (2025). An open toolkit for underwater field robotics. <span class="venue">arXiv:2512.15597</span>. <a href="https://arxiv.org/abs/2512.15597">arXiv</a></li>
@@ -175,9 +187,9 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
     <li><b>Picardi G.</b>, Chellapurath M., Iacoponi S., Stefanni S., Laschi C. &amp; Calisti M. (2020). Bioinspired underwater legged robot for seabed exploration with low environmental disturbance. <span class="venue">Science Robotics</span>, 5(42), eaaz1012.</li>
     <li><b>Picardi G.</b>, Laschi C. &amp; Calisti M. (2018). Model-based open loop control of a multigait legged underwater robot. <span class="venue">Mechatronics</span>, 55, 162–170.</li>
     <li>Calisti M., <b>Picardi G.</b> &amp; Laschi C. (2017). Fundamentals of soft robot locomotion. <span class="venue">Journal of the Royal Society Interface</span>, 14(130), 20170101.</li>
-  </ol>
+  </ul>
   <h2 style="margin-top:36px">Conference publications</h2>
-  <ol class="pubs">
+  <ul class="pubs">
     <li>Boiciuc C., <b>Picardi G.</b>, del Rio J., Carandell M. &amp; Toma D. (2026). Rolling locomotion for shallow-water benthic exploration using a compact spherical underwater robot. <span class="venue">IEEE OCEANS 2026</span>, Sanya.</li>
     <li>Masmitja I., Martin M., Bardaji R., … &amp; Robinson N. (2026). TECTUGA: using innovative animal-borne cameras and autonomous vehicles for ecological assessments of sea turtles and their habitats. <span class="venue">IEEE OCEANS 2026</span>, Monterey.</li>
     <li>Aguirregomezcorta J., Aguzzi J. &amp; <b>Picardi G.</b> (2025). Simulating underwater legged robotics with a ROS 2-based approach. <span class="venue">OCEANTECH workshop, IEEE/RSJ IROS 2025</span>.</li>
@@ -200,7 +212,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
     <li><b>Picardi G.</b>, Chellapurath M., Iacoponi S., Laschi C. &amp; Calisti M. (2019). Surveying and cleaning plastic pollution in the sediment: SILVER+ approach. <span class="venue">OCEANS 2019 Marseille</span>.</li>
     <li>Iacoponi S., <b>Picardi G.</b>, Chellapurath M., Calisti M. &amp; Laschi C. (2018). Underwater soft jet propulsion based on a Hoberman mechanism. <span class="venue">IEEE RoboSoft 2018</span>, 449–454.</li>
     <li><b>Picardi G.</b>, Geluardi S., Olivari M., Pollini L., Innocenti M. &amp; Bülthoff H. H. (2016). L1-based model following control of an identified helicopter model in hover. <span class="venue">72nd AHS International Annual Forum</span>.</li>
-  </ol>
+  </ul>
 </div></section>
 
 <section id="projects"><div class="wrap">
